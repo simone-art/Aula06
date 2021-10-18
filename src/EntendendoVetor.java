@@ -4,16 +4,20 @@ public class EntendendoVetor {
 
 	public static void main(String[] args) {
 
-		// new int[50] = 50 é um tamanho... vetor vai guardar 50 números
-		int vetor[] = new int[50];
+		// new int[50] = 50 é um tamanho... vetor vai guardar 6 anos de files
+		int vetor[] = new int[6];
 		Scanner leitor = new Scanner(System.in);
+		System.out.println("O tamanho do vetor é: " + vetor.length);
 
-		vetor[0] = 1977;
-		System.out.println("Digite um valor: ");
-		vetor[1] = leitor.nextInt();
-
-		System.out.println("Na primeira posição tem: " + vetor[0]);
-		System.out.println("Na segunda posição tem: " + vetor[1]);
+		for(int i = 0; i<6; i++) {
+			System.out.println("Digite o ano de lançamento de um filme: ");
+			vetor[i] = leitor.nextInt();
+		}
+		
+		for(int i = 0; i<6; i++) {
+			System.out.println("O filme foi lançado em: " + vetor[i]);
+		}
+		
 		leitor.close();
 	}
 
