@@ -4,6 +4,9 @@ public class Vetores {
 
 	public static void main(String[] args) {
 		
+		
+		//vetores: estrutura de dados homogénea
+		
 		double aluno1, aluno2, aluno3, aluno4, aluno5, aluno6, aluno7, aluno8, aluno9, aluno10, total;
 		Scanner leitor = new Scanner(System.in);
 		
