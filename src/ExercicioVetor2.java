@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class ExercicioVetor2 {
 
+	private static final String mensagemAluno = "Chamar aluno para conversar. O nome dele ou dela é:";
+
 	public static void main(String[] args) {
 		// O professor Wuni Jim Yensonal precisa de um programa para ajudar com um
 		// problema simples:
@@ -16,23 +18,34 @@ public class ExercicioVetor2 {
 		// exibir uma mensagem que diga “Chamar o aluno para conversar”
 
 		// Criar variáveis
-		int notas[] = new int[2];
+		double notas[] = new double[2];
+		// length retorna o tamanho do vetor
 		String nomes[] = new String[notas.length];
-		double media;
-		final String mensagemAluno = "Chamar o aluno para conversar";
+		double media = 0;
 		Scanner leitor = new Scanner(System.in);
 
 		// Calcular as notas em um vetor e os nomes em outro
 		for (int i = 0; i < notas.length; i++) {
 			System.out.print("Por favor, informe a nota do " + (i + 1) + "º aluno: ");
-			notas[i] = leitor.nextInt();
+			notas[i] = leitor.nextDouble();
 			System.out.print("Por favor, informe o nome deste aluno: ");
 			nomes[i] = leitor.next();
+			media = media + notas[i];
 		}
 
 		// Calcular a média
+		media = media / (double) notas.length;
+		System.out.println("A mêdia da turma é: " + media);
 
 		// Para cada nota que estiver abaixo da média, exibir uma mensagem.
-	}
+		for (int i = 0; i < notas.length; i++) {
+			if (notas[i] < media) {
+				System.out.println(mensagemAluno + nomes[i]);
+				System.out.println("===================================");
 
+			}
+
+		}
+
+	}
 }
